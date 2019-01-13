@@ -1,0 +1,55 @@
+<!-- ~ Copyright (c) 2015. Onefootball GmbH. All rights reserved.--><!--Todo : change any attribute has Left to Start or Right to End to support rtl depending on localization--><!--Todo : change dimens -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--Todo : use the string resource of the text attribute (No hardcoded string should be in layout or in classes-->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:text="@string/dialog_push_title" />
+
+        <TextView
+            android:id="@+id/entity_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:text="@string/unknown"
+            android:textSize="@dimen/_12sdp" />
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/entity_name"
+            android:listSelector="@android:color/transparent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_view"
+            android:layout_marginBottom="@dimen/_8sdp">
+            <!--Todo : use the color resource of the textColor attribute (No hardcoded color should be in layout or in classes-->
+            <Button
+                android:id="@+id/button_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/done"
+                android:textColor="@color/colorGreen" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
